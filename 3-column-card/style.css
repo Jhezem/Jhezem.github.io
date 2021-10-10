@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display');
+
+body {
+    height: 100%;
+    text-align: center;
+    background: hsl(0, 0%, 95%);
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+}
+
+article {
+    padding: 50px;
+    text-align: left;
+}
+
+.attribution {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 20px;
+    
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+#sendan {
+    background: hsl(31, 77%, 52%);
+    border-radius: 10px 0 0 10px;
+}
+
+#suvs {
+    background: hsl(184, 100%, 22%);
+}
+
+#luxury {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+}
+
+#btn_sedan {
+    color: hsl(31, 77%, 52%);
+}
+
+#btn_suvs {
+    color: hsl(184, 100%, 22%);
+}
+
+#btn_luxury {
+    color: hsl(179, 100%, 13%);
+}
+
+.car_title img {
+    margin-bottom: 20px;
+}
+
+.car_title h1 {
+    font-size: 2em;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.card_body p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.car_title {
+    color: hsl(0, 0%, 95%);
+}
+
+.car_cta button {
+    font-family: 'Lexend Deca', sans-serif;
+    border-radius: 30px;
+    border: solid 1px hsl(0, 0%, 95%);
+    padding: 15px 30px 15px 30px;
+}
+
+.car_cta button:hover {
+    background: transparent;
+    color: hsl(0, 0%, 95%) !important;
+}
+
+/**** mobile *****/
+@media (max-width:500px){
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+    }
+    #sendan {
+        border-radius: 10px 10px 0 0px !important;
+    }
+    #luxury {
+        border-radius: 0 0 10px 10px !important;
+    }
+}
