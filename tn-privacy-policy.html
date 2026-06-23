@@ -112,7 +112,7 @@
 
   <div class="wrap">
     <div class="card">
-      <p class="meta"><strong>Última actualización:</strong> 8 de junio de 2026</p>
+      <p class="meta"><strong>Última actualización:</strong> 23 de junio de 2026</p>
 
       <p>
         Esta Política de Privacidad describe cómo la aplicación móvil
@@ -125,15 +125,43 @@
 
       <h2>1. Información que recopilamos</h2>
       <p>
-        La App es un juego de damas que funciona <strong>sin conexión</strong> y
-        <strong>no requiere registro ni cuenta de usuario</strong>. Nosotros
-        <strong>no recopilamos directamente</strong> datos personales como nombre,
-        correo electrónico, número de teléfono ni ubicación.
+        La App ofrece modos de juego <strong>sin conexión</strong> (contra la IA
+        o con 2 jugadores en el mismo dispositivo) y un <strong>Modo Online</strong>
+        (partidas en tiempo real contra otros jugadores). Los datos recopilados
+        varían según el modo que usted utilice.
       </p>
+
+      <h3 style="font-size:1.05rem; color:#4c5b1b; margin-top:16px;">Modos sin conexión</h3>
       <p>
-        Sin embargo, la App utiliza servicios de terceros que pueden recopilar
-        cierta información de forma automática para mostrar anuncios. Esto incluye:
+        No recopilamos directamente datos personales. El nombre de jugador y
+        preferencias que usted configure se almacenan <strong>únicamente en su
+        dispositivo</strong> (almacenamiento local, sin transmisión a servidores).
       </p>
+
+      <h3 style="font-size:1.05rem; color:#4c5b1b; margin-top:16px;">Modo Online</h3>
+      <p>Cuando usted utiliza el Modo Online, la App recopila y transmite a
+        nuestro servidor de juego:</p>
+      <ul>
+        <li><strong>Nombre de jugador (displayName):</strong> texto que usted
+          elige libremente. Se muestra a su rival durante la partida.</li>
+        <li><strong>Identificador anónimo de jugador:</strong> un código UUID
+          generado aleatoriamente y guardado en su dispositivo, sin vinculación
+          a su identidad real.</li>
+        <li><strong>Datos de la partida:</strong> movimientos, resultado
+          (victoria/empate/derrota), motivo de fin de partida y nombre de ambos
+          jugadores. Estos datos se almacenan en nuestra base de datos para
+          uso estadístico.</li>
+        <li><strong>Datos técnicos de sesión:</strong> dirección IP y tokens
+          temporales de reconexión (válidos por 60 segundos).</li>
+      </ul>
+      <p>
+        La App <strong>no requiere registro, correo electrónico ni contraseña</strong>
+        para el Modo Online. No vinculamos los datos anteriores con su identidad
+        personal.
+      </p>
+
+      <h3 style="font-size:1.05rem; color:#4c5b1b; margin-top:16px;">Anuncios (todos los modos)</h3>
+      <p>Los servicios de publicidad de terceros pueden recopilar automáticamente:</p>
       <ul>
         <li>Identificador de publicidad del dispositivo (Advertising ID).</li>
         <li>Dirección IP y datos técnicos del dispositivo (modelo, sistema operativo, idioma).</li>
@@ -162,6 +190,10 @@
       <h2>3. Permisos de la aplicación</h2>
       <p>La App solicita los siguientes permisos en dispositivos Android:</p>
       <ul>
+        <li><strong>Internet (INTERNET):</strong> requerido para el Modo Online
+          (conexión al servidor de partidas) y para la carga de anuncios a través
+          de Google AdMob.
+        </li>
         <li><strong>Audio (grabación y ajustes de audio):</strong> utilizado únicamente
           para la reproducción y control de los efectos de sonido del juego. La App
           <strong>no graba ni almacena audio</strong> del usuario.
@@ -169,12 +201,16 @@
       </ul>
 
       <h2>4. Uso de la información</h2>
-      <p>La información recopilada por los servicios de terceros se utiliza para:</p>
+      <p>Los datos recopilados por la App se utilizan exclusivamente para:</p>
       <ul>
-        <li>Mostrar y personalizar anuncios.</li>
-        <li>Medir el rendimiento de los anuncios.</li>
-        <li>Prevenir fraudes y mejorar la seguridad del servicio publicitario.</li>
+        <li><strong>Funcionalidad del Modo Online:</strong> identificar a los jugadores
+          durante la partida, mostrar el nombre del rival y registrar resultados
+          para estadísticas internas.</li>
+        <li><strong>Anuncios:</strong> mostrar y personalizar anuncios, medir su
+          rendimiento y prevenir fraudes a través de Google AdMob.</li>
       </ul>
+      <p>No utilizamos los datos para perfilar usuarios, venderlos a terceros ni
+        con fines distintos a los descritos.</p>
 
       <h2>5. Privacidad de los niños</h2>
       <p>
@@ -183,14 +219,31 @@
         menor nos ha proporcionado información, contáctenos para eliminarla.
       </p>
 
-      <h2>6. Seguridad de los datos</h2>
+      <h2>6. Proveedor de base de datos (Modo Online)</h2>
       <p>
-        No almacenamos datos personales en nuestros servidores. La información
-        técnica gestionada por terceros (Google) se trata conforme a sus propias
-        políticas y medidas de seguridad.
+        Los datos de partidas del Modo Online se almacenan en
+        <strong>Supabase</strong> (Supabase Inc., EE. UU.), un servicio de base
+        de datos en la nube. Supabase actúa como procesador de datos en nuestro
+        nombre. Sus datos se tratan conforme a su política de privacidad:
+        <a href="https://supabase.com/privacy" target="_blank" rel="noopener">
+          https://supabase.com/privacy</a>.
       </p>
 
-      <h2>7. Sus derechos y opciones</h2>
+      <h2>7. Seguridad de los datos</h2>
+      <p>
+        Los datos del Modo Online (nombre de jugador, resultados de partidas) se
+        transmiten mediante conexiones cifradas (TLS/WSS) y se almacenan en
+        Supabase con acceso restringido mediante políticas de seguridad a nivel
+        de fila (Row Level Security). No almacenamos contraseñas, datos de pago
+        ni información personal identificable más allá de lo descrito en la
+        sección 1.
+      </p>
+      <p>
+        La información técnica gestionada por terceros (Google AdMob, Supabase)
+        se trata conforme a sus propias políticas y medidas de seguridad.
+      </p>
+
+      <h2>8. Sus derechos y opciones</h2>
       <p>
         Puede restablecer o eliminar su identificador de publicidad, o desactivar
         la personalización de anuncios, desde la configuración de su dispositivo:
@@ -200,14 +253,14 @@
         <li><strong>iOS:</strong> Ajustes &rarr; Privacidad &rarr; Publicidad.</li>
       </ul>
 
-      <h2>8. Cambios a esta política</h2>
+      <h2>9. Cambios a esta política</h2>
       <p>
         Podemos actualizar esta Política de Privacidad ocasionalmente. Los cambios
         se publicarán en esta misma página con una nueva fecha de "Última
         actualización".
       </p>
 
-      <h2>9. Contacto</h2>
+      <h2>10. Contacto</h2>
       <p>
         Si tiene preguntas sobre esta Política de Privacidad, puede contactarnos en:
         <br />
